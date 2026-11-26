@@ -159,6 +159,19 @@ details>summary{cursor:pointer;list-style:none}
     ids.forEach(function(i){document.getElementById(i).hidden=(i!==h)});
     window.scrollTo(0,0);
   }
+  function go(h){
+    if(ids.indexOf(h)<0)h='accueil';
+    ids.forEach(function(i){document.getElementById(i).hidden=(i!==h)});
+    window.scrollTo(0,0);
+    try{if(location.hash!=='#'+h)history.replaceState(null,'','#'+h)}catch(e){}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');
+    if(!a)return;
+    var h=a.getAttribute('href').slice(1);
+    if(ids.indexOf(h)<0)return;
+    e.preventDefault();go(h);
+  });
   window.addEventListener('hashchange',show);show();
 })();
 </script></body></html>
