@@ -1,0 +1,14 @@
+Dar Zinab Direct — site fictif (projet pédagogique, Dar Zinab n'existe pas)
+
+Contenu : app.py, site.html (site complet, images incluses), requirements.txt
+
+Essai en local :
+  pip install streamlit
+  streamlit run app.py
+
+Mise en ligne (Streamlit Community Cloud) :
+  1. Créer un dépôt GitHub PRIVÉ et y déposer ces 3 fichiers.
+  2. Sur share.streamlit.io : New app > choisir le dépôt > fichier principal app.py > Deploy.
+  3. Dans les paramètres de l'app > Sharing : limiter l'accès aux adresses e-mail
+     de l'équipe, des enseignants et du jury (ne pas laisser l'app publique
+     sans l'accord écrit de l'enseignant).
